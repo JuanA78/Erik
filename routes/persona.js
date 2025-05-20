@@ -4,8 +4,8 @@ const personaController = require("../controllers/personaController");
 
 router.post("/", personaController.insertarTodo);
 router.get("/", personaController.obtenerTodo);
-router.get("/:id", personaController.buscarPorId);
-router.get("/curp/:curp", personaController.buscarPorCurp);
+router.get("/curp/:curp", personaController.buscarPorCurp);  // <-- aquí primero
+router.get("/:id", personaController.buscarPorId);           // <-- aquí después
 router.delete("/curp/:curp", personaController.eliminarPorCurp);
 
 module.exports = router;
